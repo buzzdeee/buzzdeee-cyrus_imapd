@@ -29,11 +29,11 @@
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Sebastian Reitenbach <sebastia@l00-bugdead-prods.de>
 #
 # === Copyright
 #
-# Copyright 2014 Your name here, unless otherwise noted.
+# Copyright 2014 Sebastian Reitenbach, unless otherwise noted.
 #
 class cyrus_imapd (
   $override_imapd_conf_settings = $cyrus_imapd::params::imapd_conf_settings,
@@ -47,7 +47,7 @@ class cyrus_imapd (
   $service_flags  = $cyrus_imapd::params::service_flags,
 ) inherits cyrus_imapd::params {
 
-  class { cyrus_imapd::install:
+  class { 'cyrus_imapd::install':
     package_name   => $package_name,
     package_ensure => $package_ensure,
     package_flavor => $package_flavor,
@@ -56,12 +56,12 @@ class cyrus_imapd (
   $cyrus_conf_settings = deep_merge($cyrus_imapd::params::cyrus_conf_settings, $override_cyrus_conf_settings)
   $imapd_conf_settings = deep_merge($cyrus_imapd::params::imapd_conf_settings, $override_imapd_conf_settings)
 
-  class { cyrus_imapd::config:
+  class { 'cyrus_imapd::config':
     cyrus_conf_settings => $cyrus_conf_settings,
     imapd_conf_settings => $imapd_conf_settings,
   }
 
-  class { cyrus_imapd::service:
+  class { 'cyrus_imapd::service':
     service_name   => $service_name,
     service_ensure => $service_ensure,
     service_enable => $service_enable,

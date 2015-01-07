@@ -1,3 +1,6 @@
+# Private class, do not use directly.
+# Takes care about the configuration files.
+
 class cyrus_imapd::config (
   $cyrus_conf_settings,
   $imapd_conf_settings,

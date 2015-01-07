@@ -1,3 +1,6 @@
+# Private class, do not use directly.
+# The parameters that drive the module.
+
 class cyrus_imapd::params {
   $imapd_conf_settings = {
     configdirectory                        => '/var/imap',
