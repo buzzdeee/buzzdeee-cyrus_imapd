@@ -12,7 +12,7 @@ class cyrus_imapd::params {
     admins                                 => 'cyrus',
     allowanonymouslogin                    => 'no',
     allowplaintext                         => 'yes',
-    autocreatequota                        => '10000000',
+    autocreate_quota                       => '10000000',
     reject8bit                             => 'no',
     quotawarn                              => '90',
     timeout                                => '90',
@@ -24,9 +24,9 @@ class cyrus_imapd::params {
     lmtp_overquota_perm_failure            => 'no',
     lmtp_downcase_rcpt                     => 'yes',
     postuser                               => 'bb',
-    tls_cert_file                          => '/etc/imapd/cert.pem',
-    tls_key_file                           => '/etc/imapd/cert.key',
-    tls_ca_file                            => '/etc/imapd/ca.pem',
+    tls_server_cert                        => '/etc/imapd/cert.pem',
+    tls_server_key                         => '/etc/imapd/cert.key',
+    tls_client_ca_file                     => '/etc/imapd/ca.pem',
     unixhierarchysep                       => 'yes',
   }
   $cyrus_conf_settings = {
