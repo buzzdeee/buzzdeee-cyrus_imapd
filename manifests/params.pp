@@ -20,7 +20,7 @@ class cyrus_imapd::params {
     dracinterval                           => '0',
     drachost                               => 'localhost',
     sasl_pwcheck_method                    => 'saslauthd',
-    lmtpsocket                             => '/var/run/cyrus/socket/lmtp',
+    lmtpsocket                             => '/var/imap/socket/lmtp',
     lmtp_overquota_perm_failure            => 'no',
     lmtp_downcase_rcpt                     => 'yes',
     postuser                               => 'bb',
