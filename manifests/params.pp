@@ -28,6 +28,9 @@ class cyrus_imapd::params {
     tls_server_key                         => '/etc/imapd/cert.key',
     tls_client_ca_file                     => '/etc/imapd/ca.pem',
     unixhierarchysep                       => 'yes',
+    duplicatesuppression                   => '1',
+    delete_mode                            => 'immediate',
+    deletedprefix                          => 'DELETED',
   }
   $cyrus_conf_settings = {
 # NOT YET
