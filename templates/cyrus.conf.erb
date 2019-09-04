@@ -36,7 +36,7 @@ EVENTS {
 
   # this is only necessary if using duplicate delivery suppression,
   # Sieve or NNTP
-  delprune	cmd="cyr_expire -E 3" at=0400
+  delprune	cmd="cyr_expire -D 7 -X 7 -E 3" at=0400
 
   # this is only necessary if caching TLS sessions
   tlsprune	cmd="tls_prune" at=0400
