@@ -6,7 +6,7 @@ class cyrus_imapd::params {
     configdirectory                        => '/var/imap',
     partition-default                      => '/var/spool/imap',
     sievedir                               => '/var/sieve',
-    sieve_extensions                       => 'fileinto reject vacation imapflags notify envelope relational regex subaddress copy',
+    sieve_extensions                       => 'fileinto reject vacation imap4flags notify envelope relational regex subaddress copy',
     sieve_sasl_send_unsolicited_capability => '1',
     sieve_maxscriptsize                    => '128',
     admins                                 => 'cyrus',
